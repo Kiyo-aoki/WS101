@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #0d1117, #1a1f2b);
+    color: #c9d1d9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-card {
+    display: flex;
+    gap: 30px;
+    background: rgba(22, 27, 34, 0.7);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 255, 180, 0.15);
+    padding: 30px;
+    max-width: 1000px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.left-panel {
+    flex: 1 1 300px;
+    text-align: center;
+    border-right: 2px solid #30363d;
+    padding-right: 30px;
+}
+
+.right-panel {
+    flex: 2 1 500px;
+}
+
+.profile-pic img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #00ffb4;
+    box-shadow: 0 0 20px rgba(0, 255, 180, 0.6);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #00ffb4;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #8b949e;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #8b949e;
+    margin: 0 10px;
+    font-size: 1.4em;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00ffb4;
+    transform: scale(1.2);
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #00ffb4;
+    color: #0d1117;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #00e6a8;
+    transform: scale(1.05);
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid #00ffb4;
+    color: #00ffb4;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-btn i {
+    font-size: 1em;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background-color: #00ffb4;
+    color: #0d1117;
+    box-shadow: 0 0 10px rgba(0, 255, 180, 0.4);
+    transform: scale(1.02);
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.skills-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skills-icons div {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #30363d;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 100px;
+    transition: 0.3s;
+}
+
+.skills-icons div:hover {
+    transform: scale(1.05);
+    border-color: #00ffb4;
+}
+
+.skills-icons i {
+    font-size: 1.8em;
+    color: #00ffb4;
+    margin-bottom: 8px;
+}
+
+.skills-icons span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.contacts {
+    margin-bottom: 12px;
+    font-size: 1em;
+}
+
+.contacts a {
+    color: #00ffb4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contacts a:hover {
+    color: #00e6a8;
+}
+
+.contacts i {
+    margin-right: 8px;
+    color: #00ffb4;
+}
+
+@media (max-width: 768px) {
+    .main-card {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        border-right: none;
+        border-bottom: 2px solid #30363d;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+}
